@@ -99,6 +99,12 @@ h1 {
   margin-bottom: 1rem;
 }
 
+h2{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
 .landing-page {
   height: 80vh;
   /*background-color: aliceblue;*/
@@ -124,10 +130,12 @@ h1 {
   transition: all 0.5s ease-in-out;
 }
 
-.about-me {
+.about-me{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  font-size: 50px;
+  height: 80vh;
 }
 
 .about-me span {
@@ -141,55 +149,80 @@ h1 {
 }
 
 .my-hobbies {
-  /* background-color: aliceblue; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 4rem;
+  height: 100vh;
 }
 
-.my-hobbies ul {
-  padding: 0;
-  margin: 0;
+.my-hobbies-title {
+  text-align: left;
+  gap: 2rem;
+  margin: 4rem 0 2rem 0;
 }
 
-#card {
-  /* background-color: aliceblue; */
+.my-hobbies-card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr); /* Membuat 2 kolom */
+  gap: 5rem; /* Jarak antar card */
+  justify-items: center; 
+  align-items: start;
 }
 
-#card p{
-  border:1px solid #5c45fd;
+.card {
   padding: 1rem;
-  text-align: center;
+  border: 1px solid #5c45fd;
   border-radius: 5px;
-  font-weight: 300;
-  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 100%; /* Agar card menyesuaikan dengan grid */
+  /* background-color: #1a1a1a; */
+  color: #fff;
+  transition: background-color 0.5s ease-in-out;
 }
 
-#card p:hover {
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.card p {
+  display: none;
+  background-color: #282828;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.card:hover h3{
   background-color: #5c45fd;
   color: #f5f5f5;
-  transition: all 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 
-#my-skills{
+.card:active h3{
+  background-color: #f5f5f5;
+  color:#5c45fd;
+  transition: background-color 0.5s ease-in-out;
+}
+.my-skills{
   /* background-color: aliceblue; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 2rem;
+  height: 100vh;
+  list-style: none;
+  justify-content: center;
 }
 
-#my-skills ul {
+.my-skills ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-#my-skills ul li {
+.my-skills ul li {
   display: flex;
   gap: 1rem;
   list-style: none;
@@ -198,11 +231,11 @@ h1 {
   
 }
 
-#my-skills ul li p{
+.my-skills ul li p{
   padding: 0.5rem;
 }
 
-#my-skills ul li span {
+.my-skills ul li span {
   color: #969799;
   font-weight: 300;
 }
@@ -222,3 +255,9 @@ h1 {
 #contact-me a{
   text-decoration: none;
 }
+  
+@media (max-width: 768px) {
+    .my-hobbies-card {
+      grid-template-columns: 1fr;
+    }
+  }
