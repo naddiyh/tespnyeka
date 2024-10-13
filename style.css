@@ -4,19 +4,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Matemasie&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Handjet:wght@100..900&family=Matemasie&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Handjet:wght@100..900&family=Matemasie&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+
 * {
   background-color: #161616;
   color: #f5f5f5;
   font-family: "Poppins", sans-serif;
   margin: 0;
+  box-sizing: border-box;
 }
 
 header.navbar-container {
   display: flex;
   margin-inline: auto;
   justify-content: space-between;
-  padding: 2rem 4rem;
-  /*background-color: aliceblue;*/
+  padding: 1rem 4rem;
   align-items: center;
   font-size: 20px;
 }
@@ -87,10 +89,9 @@ span.name:hover {
 }
 
 main {
-  flex: 1;
   margin-inline: auto;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
 }
 
 h1 {
@@ -102,17 +103,15 @@ h1 {
 h2{
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
 }
 
 .landing-page {
-  height: 80vh;
-  /*background-color: aliceblue;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.1rem;
+  height: 100vh;
 }
 
 .landing-page p {
@@ -132,10 +131,12 @@ h2{
 
 .about-me{
   display: flex;
+  justify-content: start;
   flex-direction: column;
-  gap: 2rem;
+  /* gap: 1rem; */
   font-size: 50px;
-  height: 80vh;
+  min-height: 110vh;
+  /* background-color: aliceblue; */
 }
 
 .about-me span {
@@ -145,29 +146,28 @@ h2{
 
 .about-me span:hover {
   color: #a89bff;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .my-hobbies {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
-  margin-top: 4rem;
-  height: 100vh;
+  min-height: auto;
+  /* background-color: aliceblue; */
 }
 
-.my-hobbies-title {
+#my-hobbies-title {
   text-align: left;
-  gap: 2rem;
-  margin: 4rem 0 2rem 0;
 }
 
-.my-hobbies-card {
+#my-hobbies-card {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Membuat 2 kolom */
   gap: 5rem; /* Jarak antar card */
-  justify-items: center; 
   align-items: start;
+  justify-items: center;
 }
 
 .card {
@@ -176,20 +176,24 @@ h2{
   border-radius: 5px;
   text-align: center;
   width: 100%; /* Agar card menyesuaikan dengan grid */
-  /* background-color: #1a1a1a; */
   color: #fff;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.card:hover{
+  background-color: #5c45fd;
+  color: #f5f5f5;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .card h3 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 25px;
   padding: 1rem;
 }
 
 .card p {
   display: none;
-  background-color: #282828;
   padding: 0.5rem;
   border-radius: 5px;
   margin-top: 1rem;
@@ -197,42 +201,53 @@ h2{
 
 .card:hover h3{
   background-color: #5c45fd;
-  color: #f5f5f5;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .card:active h3{
   background-color: #f5f5f5;
   color:#5c45fd;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
 }
-.my-skills{
-  /* background-color: aliceblue; */
+
+.my-skills {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  height: 100vh;
-  list-style: none;
-  justify-content: center;
+  justify-content: start;
+  gap: 1rem;
+  min-height: 130vh;
 }
 
 .my-skills ul {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 0 5rem;
 }
 
 .my-skills ul li {
   display: flex;
-  gap: 1rem;
   list-style: none;
   font-weight: 500;
-  padding: 0.5rem;
-  
+  align-items: center;
 }
 
 .my-skills ul li p{
   padding: 0.5rem;
+  font-size: 35px;
+  font-weight: bold;
+  display: none;
+}
+
+.my-skills ul li:hover p{
+  display: inline;
+  padding: 0.5rem;
+  border-radius: 2px;
+}
+
+.my-skills ul li img{
+  width: 150px;
+  height: 150px;
 }
 
 .my-skills ul li span {
@@ -240,22 +255,6 @@ h2{
   font-weight: 300;
 }
 
-#contact-me{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-#contact-me li{
-  font-weight: 300;
-  list-style: none;
-}
-
-#contact-me a{
-  text-decoration: none;
-}
-  
 @media (max-width: 768px) {
     .my-hobbies-card {
       grid-template-columns: 1fr;
