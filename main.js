@@ -53,7 +53,7 @@ $("#app").html(`
       <h2 id="my-skills" data-scroll data-scroll-speed="1">My Skills</h2>
       <ul>
         <li data-scroll data-scroll-speed="1.5">
-          <img src="./image/html.svg" alt="HTML">
+          <img src="./image/Html.svg" alt="HTML">
           <p>HTML</p>
         </li>
         <li data-scroll data-scroll-speed="1.5">
