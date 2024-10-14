@@ -57,7 +57,7 @@ $("#app").html(`
           <p>HTML</p>
         </li>
         <li data-scroll data-scroll-speed="1.5">
-          <img src="./image/css.svg" alt="CSS">
+          <img src="./image/Gojo_pixel.png" alt="CSS">
           <p>CSS</p>
         </li>
         <li data-scroll data-scroll-speed="1.5">
